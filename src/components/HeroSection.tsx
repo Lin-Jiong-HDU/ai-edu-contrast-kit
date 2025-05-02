@@ -42,20 +42,7 @@ const HeroSection = () => {
               </Button>
             </div>
             
-            <div className="pt-4 md:pt-6 flex items-center gap-3 md:gap-6 text-muted-foreground">
-              <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map((i) => (
-                  <div
-                    key={i}
-                    className={cn(
-                      "w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-background",
-                      i % 2 === 0 ? "bg-primary/80" : "bg-secondary/80"
-                    )}
-                  />
-                ))}
-              </div>
-              <p className="text-xs md:text-sm">已有<span className="font-bold text-foreground">1,000+</span>教师使用</p>
-            </div>
+            {/* Removed the user count section */}
           </div>
           
           <div className="relative h-[300px] md:h-[400px] lg:h-[500px] mt-4 md:mt-0">
