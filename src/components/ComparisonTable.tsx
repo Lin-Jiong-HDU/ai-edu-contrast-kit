@@ -3,6 +3,7 @@ import { GraduationCap, Brain, CheckCheck, FileText, FilePlus, Presentation, Fil
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import FeatureCard from "./FeatureCard";
+import AnimatedIcon from "./AnimatedIcon";
 
 const ComparisonTable = () => {
   const features = [
