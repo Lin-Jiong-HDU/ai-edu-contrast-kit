@@ -51,7 +51,7 @@ const Footer = () => {
         
         <div className="flex flex-col md:flex-row items-center justify-between">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} 教学AI助手 - 版权所有
+            © {currentYear} AI思政实验室 - 版权所有
           </p>
           <div className="flex gap-4 mt-4 md:mt-0">
             <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
