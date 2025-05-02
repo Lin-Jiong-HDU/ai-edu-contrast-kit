@@ -15,9 +15,9 @@ const AnimatedIcon = ({
   animation = "float" 
 }: AnimatedIconProps) => {
   const sizeClasses = {
-    sm: "p-2 text-xl",
-    md: "p-3 text-2xl",
-    lg: "p-4 text-3xl"
+    sm: "p-1.5 sm:p-2 text-lg sm:text-xl",
+    md: "p-2 sm:p-3 text-xl sm:text-2xl",
+    lg: "p-2.5 sm:p-4 text-2xl sm:text-3xl"
   };
 
   const animationClass = animation === "float" 

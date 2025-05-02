@@ -66,22 +66,22 @@ const ComparisonTable = () => {
   ];
 
   return (
-    <section className="py-12" id="comparison">
+    <section className="py-8 md:py-12 px-4 md:px-0" id="comparison">
       <div className="container">
-        <h2 className="text-3xl font-bold text-center mb-10">功能对比</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-10">功能对比</h2>
         
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 mb-10">
-          <div className="p-4">
-            <Card className="border-gray-300 p-6 h-full">
-              <div className="flex items-center justify-center mb-4">
-                <AnimatedIcon icon={<Brain />} color="bg-gray-600" size="lg" animation="none" />
+        <div className="grid grid-cols-1 gap-4 md:gap-6 lg:grid-cols-2 mb-6 md:mb-10">
+          <div className="p-2 md:p-4">
+            <Card className="border-gray-300 p-4 md:p-6 h-full">
+              <div className="flex items-center justify-center mb-3 md:mb-4">
+                <AnimatedIcon icon={<Brain />} color="bg-gray-600" size="md" animation="none" />
               </div>
-              <h3 className="text-2xl font-bold text-center mb-2">传统AI</h3>
-              <p className="text-muted-foreground text-center mb-4">
+              <h3 className="text-xl md:text-2xl font-bold text-center mb-2">传统AI</h3>
+              <p className="text-sm md:text-base text-muted-foreground text-center mb-3 md:mb-4">
                 一般性功能，缺乏教育专业性
               </p>
-              <Separator className="my-4 bg-gray-300" />
-              <ul className="space-y-2">
+              <Separator className="my-3 md:my-4 bg-gray-300" />
+              <ul className="space-y-1.5 md:space-y-2 text-sm md:text-base">
                 <li className="flex items-start">
                   <span className="mr-2 text-gray-500">•</span>
                   <span>通用型AI，未针对教育场景优化</span>
@@ -102,31 +102,31 @@ const ComparisonTable = () => {
             </Card>
           </div>
           
-          <div className="p-4">
-            <Card className="border-primary p-6 h-full bg-gradient-to-br from-primary/5 to-secondary/5">
-              <div className="flex items-center justify-center mb-4">
-                <AnimatedIcon icon={<GraduationCap />} color="bg-primary" size="lg" />
+          <div className="p-2 md:p-4">
+            <Card className="border-primary p-4 md:p-6 h-full bg-gradient-to-br from-primary/5 to-secondary/5">
+              <div className="flex items-center justify-center mb-3 md:mb-4">
+                <AnimatedIcon icon={<GraduationCap />} color="bg-primary" size="md" />
               </div>
-              <h3 className="text-2xl font-bold text-center text-primary mb-2">教学AI助手</h3>
-              <p className="text-muted-foreground text-center mb-4">
+              <h3 className="text-xl md:text-2xl font-bold text-center text-primary mb-2">教学AI助手</h3>
+              <p className="text-sm md:text-base text-muted-foreground text-center mb-3 md:mb-4">
                 专为教育场景设计的智能助手
               </p>
-              <Separator className="my-4 bg-primary/30" />
-              <ul className="space-y-2">
+              <Separator className="my-3 md:my-4 bg-primary/30" />
+              <ul className="space-y-1.5 md:space-y-2 text-sm md:text-base">
                 <li className="flex items-start">
-                  <span className="mr-2 text-primary"><CheckCheck size={18} /></span>
+                  <span className="mr-1.5 md:mr-2 text-primary"><CheckCheck size={16} className="md:size-18" /></span>
                   <span>专业教育内容生成能力</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2 text-primary"><CheckCheck size={18} /></span>
+                  <span className="mr-1.5 md:mr-2 text-primary"><CheckCheck size={16} className="md:size-18" /></span>
                   <span>教学资源自动化生成与管理</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2 text-primary"><CheckCheck size={18} /></span>
+                  <span className="mr-1.5 md:mr-2 text-primary"><CheckCheck size={16} className="md:size-18" /></span>
                   <span>高质量的教学内容一键生成</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2 text-primary"><CheckCheck size={18} /></span>
+                  <span className="mr-1.5 md:mr-2 text-primary"><CheckCheck size={16} className="md:size-18" /></span>
                   <span>智能网络资源检索与整合</span>
                 </li>
               </ul>
@@ -134,9 +134,9 @@ const ComparisonTable = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-8 md:mt-12">
           {features.map((feature) => (
-            <div key={feature.id} className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div key={feature.id} className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-4">
               <FeatureCard
                 title={feature.traditional.title}
                 description={feature.traditional.description}
