@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
 import ComparisonTable from "@/components/ComparisonTable";
@@ -16,7 +17,7 @@ const Index = () => {
     if (cozeWebSDK) {
       try {
         console.log("Opening AI chat interface...");
-        cozeWebSDK.show();
+        cozeWebSDK.showChatBot(); // 更新为正确的方法
       } catch (error) {
         console.error('Failed to open AI chat interface:', error);
       }

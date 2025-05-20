@@ -1,3 +1,4 @@
+
 import { GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -11,7 +12,7 @@ const Footer = () => {
     const cozeWebSDK = (window as any).cozeWebSDK;
     if (cozeWebSDK) {
       try {
-        cozeWebSDK.show();
+        cozeWebSDK.showChatBot(); // 更新为正确的方法
       } catch (error) {
         console.error('Failed to open AI chat interface:', error);
       }
