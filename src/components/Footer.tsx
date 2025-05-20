@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="flex items-center justify-center mb-6">
           <div className="flex items-center gap-2 text-primary">
             <GraduationCap size={24} />
-            <span className="font-bold text-xl">教学AI助手</span>
+            <span className="font-bold text-xl">范小教AI助手</span>
           </div>
         </div>
         

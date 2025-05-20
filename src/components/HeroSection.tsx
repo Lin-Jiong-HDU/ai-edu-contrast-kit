@@ -60,7 +60,7 @@ const HeroSection = () => {
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 scale-75 md:scale-100">
                 <div className="p-3 md:p-6 bg-white/95 shadow-xl rounded-lg border border-primary/30 w-36 md:w-48 h-36 md:h-48 flex flex-col items-center justify-center animate-float">
                   <GraduationCap size={36} className="md:size-48 text-primary mb-1 md:mb-2" />
-                  <span className="font-bold text-center text-sm md:text-base">教学AI助手</span>
+                  <span className="font-bold text-center text-sm md:text-base">范小教AI助手</span>
                   <span className="text-xs text-muted-foreground text-center mt-0.5 md:mt-1 hidden sm:block">专业教育功能</span>
                 </div>
               </div>

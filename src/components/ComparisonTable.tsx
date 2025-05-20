@@ -107,7 +107,7 @@ const ComparisonTable = () => {
               <div className="flex items-center justify-center mb-3 md:mb-4">
                 <AnimatedIcon icon={<GraduationCap />} color="bg-primary" size="md" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-center text-primary mb-2">教学AI助手</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-center text-primary mb-2">范小教AI助手</h3>
               <p className="text-sm md:text-base text-muted-foreground text-center mb-3 md:mb-4">
                 专为教育场景设计的智能助手
               </p>

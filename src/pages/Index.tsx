@@ -17,7 +17,7 @@ const Index = () => {
         <div className="container flex h-14 md:h-16 items-center justify-between">
           <div className="flex items-center gap-1.5 md:gap-2 text-primary">
             <GraduationCap size={22} className="md:size-24" />
-            <span className="font-bold text-lg md:text-xl">教学AI助手</span>
+            <span className="font-bold text-lg md:text-xl">范小教AI助手</span>
           </div>
           
           {/* Desktop Navigation */}
