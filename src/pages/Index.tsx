@@ -1,32 +1,43 @@
-
 import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
 import ComparisonTable from "@/components/ComparisonTable";
 import FeatureShowcase from "@/components/FeatureShowcase";
 import Footer from "@/components/Footer";
 import { GraduationCap, Menu } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Index = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
   // Function to open the AI chat interface
   const openAIChat = () => {
-    const chatInterface = document.getElementById('position_demo');
-    if (chatInterface) {
-      // Call the Coze Web SDK to open the chat interface
-      const cozeWebSDK = (window as any).CozeWebSDK;
-      if (cozeWebSDK && cozeWebSDK.WebChatClient) {
-        try {
-          cozeWebSDK.webChatClient.show();
-        } catch (error) {
-          console.error('Failed to open AI chat interface:', error);
-        }
-      } else {
-        console.error('Coze Web SDK not found');
+    // Access the Coze Web SDK from the window object
+    const cozeWebSDK = (window as any).cozeWebSDK;
+    if (cozeWebSDK) {
+      try {
+        console.log("Opening AI chat interface...");
+        cozeWebSDK.show();
+      } catch (error) {
+        console.error('Failed to open AI chat interface:', error);
       }
+    } else {
+      console.error('Coze Web SDK not initialized or not found');
     }
   };
+  
+  // Make sure the SDK is initialized
+  useEffect(() => {
+    // Check if the SDK initialization has happened in the window
+    if (!(window as any).cozeWebSDK) {
+      // If not initialized yet, listen for the load event
+      window.addEventListener('load', () => {
+        console.log("Window loaded, checking for Coze SDK...");
+        if (!(window as any).cozeWebSDK) {
+          console.error("Coze SDK not found after window load");
+        }
+      });
+    }
+  }, []);
   
   return (
     <div className="min-h-screen flex flex-col">

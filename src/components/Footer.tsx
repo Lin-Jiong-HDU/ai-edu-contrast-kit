@@ -1,4 +1,3 @@
-
 import { GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -8,19 +7,16 @@ const Footer = () => {
   
   // Function to open the AI chat interface
   const openAIChat = () => {
-    const chatInterface = document.getElementById('position_demo');
-    if (chatInterface) {
-      // Call the Coze Web SDK to open the chat interface
-      const cozeWebSDK = (window as any).CozeWebSDK;
-      if (cozeWebSDK && cozeWebSDK.WebChatClient) {
-        try {
-          cozeWebSDK.webChatClient.show();
-        } catch (error) {
-          console.error('Failed to open AI chat interface:', error);
-        }
-      } else {
-        console.error('Coze Web SDK not found');
+    // Access the Coze Web SDK from the window object
+    const cozeWebSDK = (window as any).cozeWebSDK;
+    if (cozeWebSDK) {
+      try {
+        cozeWebSDK.show();
+      } catch (error) {
+        console.error('Failed to open AI chat interface:', error);
       }
+    } else {
+      console.error('Coze Web SDK not initialized or not found');
     }
   };
 
