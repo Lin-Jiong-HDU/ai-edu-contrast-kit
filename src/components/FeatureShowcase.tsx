@@ -6,7 +6,11 @@ import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import AnimatedIcon from "./AnimatedIcon";
 
-const FeatureShowcase = () => {
+interface FeatureShowcaseProps {
+  openAIChat: () => void;
+}
+
+const FeatureShowcase = ({ openAIChat }: FeatureShowcaseProps) => {
   const features = [
     {
       id: "exams",
@@ -116,7 +120,7 @@ const FeatureShowcase = () => {
                     </ul>
                   </div>
 
-                  <Button className="mt-8">立即体验</Button>
+                  <Button className="mt-8" onClick={openAIChat}>立即体验</Button>
                 </div>
               </div>
             </TabsContent>

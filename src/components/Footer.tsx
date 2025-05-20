@@ -5,6 +5,24 @@ import { Separator } from "@/components/ui/separator";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  
+  // Function to open the AI chat interface
+  const openAIChat = () => {
+    const chatInterface = document.getElementById('position_demo');
+    if (chatInterface) {
+      // Call the Coze Web SDK to open the chat interface
+      const cozeWebSDK = (window as any).CozeWebSDK;
+      if (cozeWebSDK && cozeWebSDK.WebChatClient) {
+        try {
+          cozeWebSDK.webChatClient.show();
+        } catch (error) {
+          console.error('Failed to open AI chat interface:', error);
+        }
+      } else {
+        console.error('Coze Web SDK not found');
+      }
+    }
+  };
 
   return (
     <footer className="bg-muted/40 py-12">
@@ -37,10 +55,10 @@ const Footer = () => {
           <div className="text-center md:text-right">
             <h3 className="text-lg font-semibold mb-4">联系我们</h3>
             <div className="flex flex-col items-center md:items-end gap-2">
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" onClick={openAIChat}>
                 技术支持
               </Button>
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" onClick={openAIChat}>
                 产品反馈
               </Button>
             </div>

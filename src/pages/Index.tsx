@@ -10,6 +10,24 @@ import { useState } from "react";
 const Index = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
+  // Function to open the AI chat interface
+  const openAIChat = () => {
+    const chatInterface = document.getElementById('position_demo');
+    if (chatInterface) {
+      // Call the Coze Web SDK to open the chat interface
+      const cozeWebSDK = (window as any).CozeWebSDK;
+      if (cozeWebSDK && cozeWebSDK.WebChatClient) {
+        try {
+          cozeWebSDK.webChatClient.show();
+        } catch (error) {
+          console.error('Failed to open AI chat interface:', error);
+        }
+      } else {
+        console.error('Coze Web SDK not found');
+      }
+    }
+  };
+  
   return (
     <div className="min-h-screen flex flex-col">
       {/* Mobile-friendly Navigation */}
@@ -36,7 +54,7 @@ const Index = () => {
           
           {/* Call to Action Button */}
           <div className="hidden md:block">
-            <Button>立即体验</Button>
+            <Button onClick={openAIChat}>立即体验</Button>
           </div>
         </div>
 
@@ -66,7 +84,7 @@ const Index = () => {
                 对比
               </a>
               <div className="px-4 py-2.5">
-                <Button className="w-full">立即体验</Button>
+                <Button className="w-full" onClick={openAIChat}>立即体验</Button>
               </div>
             </div>
           </div>
@@ -74,8 +92,8 @@ const Index = () => {
       </header>
       
       <main className="flex-1">
-        <HeroSection />
-        <FeatureShowcase />
+        <HeroSection openAIChat={openAIChat} />
+        <FeatureShowcase openAIChat={openAIChat} />
         <ComparisonTable />
       </main>
       

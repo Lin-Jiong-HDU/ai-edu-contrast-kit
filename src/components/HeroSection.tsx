@@ -1,9 +1,12 @@
-
 import { Button } from "@/components/ui/button";
 import { Book, GraduationCap, Brain } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  openAIChat: () => void;
+}
+
+const HeroSection = ({ openAIChat }: HeroSectionProps) => {
   return (
     <section className="relative py-8 md:py-12 lg:py-20 overflow-hidden px-4 md:px-0">
       {/* Background gradient elements */}
@@ -33,11 +36,11 @@ const HeroSection = () => {
             </p>
             
             <div className="flex flex-wrap gap-3 md:gap-4 pt-2">
-              <Button size="default" className="gap-2 text-sm md:text-base md:size-lg">
+              <Button size="default" className="gap-2 text-sm md:text-base md:size-lg" onClick={openAIChat}>
                 <Book size={16} className="md:size-18" />
                 了解更多
               </Button>
-              <Button size="default" variant="outline" className="gap-2 text-sm md:text-base md:size-lg">
+              <Button size="default" variant="outline" className="gap-2 text-sm md:text-base md:size-lg" onClick={openAIChat}>
                 功能演示
               </Button>
             </div>
