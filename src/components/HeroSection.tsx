@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Book, GraduationCap, Brain } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -35,15 +36,7 @@ const HeroSection = ({ openAIChat }: HeroSectionProps) => {
               超越传统AI的智能教学助手，为教师提供高质量教学资源自动化生成与管理。
             </p>
             
-            <div className="flex flex-wrap gap-3 md:gap-4 pt-2">
-              <Button size="default" className="gap-2 text-sm md:text-base md:size-lg" onClick={openAIChat}>
-                <Book size={16} className="md:size-18" />
-                了解更多
-              </Button>
-              <Button size="default" variant="outline" className="gap-2 text-sm md:text-base md:size-lg" onClick={openAIChat}>
-                功能演示
-              </Button>
-            </div>
+            {/* Removed the buttons that were here */}
             
             {/* Removed the user count section */}
           </div>
