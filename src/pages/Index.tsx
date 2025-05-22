@@ -4,8 +4,9 @@ import HeroSection from "@/components/HeroSection";
 import ComparisonTable from "@/components/ComparisonTable";
 import FeatureShowcase from "@/components/FeatureShowcase";
 import Footer from "@/components/Footer";
-import { GraduationCap, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import { useState, useEffect } from "react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Index = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -17,7 +18,7 @@ const Index = () => {
     if (cozeWebSDK) {
       try {
         console.log("Opening AI chat interface...");
-        cozeWebSDK.showChatBot(); // 更新为正确的方法
+        cozeWebSDK.showChatBot();
       } catch (error) {
         console.error('Failed to open AI chat interface:', error);
       }
@@ -46,7 +47,10 @@ const Index = () => {
       <header className="border-b bg-background/95 backdrop-blur-sm sticky top-0 z-50">
         <div className="container flex h-14 md:h-16 items-center justify-between">
           <div className="flex items-center gap-1.5 md:gap-2 text-primary">
-            <GraduationCap size={22} className="md:size-24" />
+            <Avatar className="h-8 w-8 md:h-9 md:w-9">
+              <AvatarImage src="/lovable-uploads/64311975-8676-4b83-afd3-477e04d3abdb.png" alt="范小教" />
+              <AvatarFallback>范</AvatarFallback>
+            </Avatar>
             <span className="font-bold text-lg md:text-xl">范小教AI助手</span>
           </div>
           

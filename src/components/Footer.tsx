@@ -1,5 +1,5 @@
 
-import { GraduationCap } from "lucide-react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
@@ -26,7 +26,10 @@ const Footer = () => {
       <div className="container">
         <div className="flex items-center justify-center mb-6">
           <div className="flex items-center gap-2 text-primary">
-            <GraduationCap size={24} />
+            <Avatar className="h-8 w-8">
+              <AvatarImage src="/lovable-uploads/64311975-8676-4b83-afd3-477e04d3abdb.png" alt="范小教" />
+              <AvatarFallback>范</AvatarFallback>
+            </Avatar>
             <span className="font-bold text-xl">范小教AI助手</span>
           </div>
         </div>
