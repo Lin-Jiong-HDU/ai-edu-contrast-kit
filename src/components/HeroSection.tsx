@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Book, GraduationCap, Brain } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -36,9 +35,12 @@ const HeroSection = ({ openAIChat }: HeroSectionProps) => {
               超越传统AI的智能教学助手，为教师提供高质量教学资源自动化生成与管理。
             </p>
             
-            {/* Removed the buttons that were here */}
-            
-            {/* Removed the user count section */}
+            {/* Add the "立即体验" button here */}
+            <div className="pt-2">
+              <Button onClick={openAIChat} size="lg" className="font-medium">
+                立即体验
+              </Button>
+            </div>
           </div>
           
           <div className="relative h-[300px] md:h-[400px] lg:h-[500px] mt-4 md:mt-0">
