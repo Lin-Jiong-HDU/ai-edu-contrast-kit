@@ -20,6 +20,10 @@ const Footer = () => {
       console.error('Coze Web SDK not initialized or not found');
     }
   };
+    const openAIChat1 = () => {
+    // Access the Coze Web SDK from the window object
+    
+  };
 
   return (
     <footer className="bg-muted/40 py-12">
@@ -52,10 +56,10 @@ const Footer = () => {
           <div className="text-center md:text-right">
             <h3 className="text-lg font-semibold mb-4">联系我们</h3>
             <div className="flex flex-col items-center md:items-end gap-2">
-              <Button variant="outline" size="sm" onClick={openAIChat}>
+              <Button variant="outline" size="sm" onClick={openAIChat1}>
                 技术支持
               </Button>
-              <Button variant="outline" size="sm" onClick={openAIChat}>
+              <Button variant="outline" size="sm" onClick={openAIChat1}>
                 产品反馈
               </Button>
             </div>
