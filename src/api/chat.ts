@@ -1,6 +1,6 @@
 // AI教学助手 API 工具函数
-const BASE_URL = "http://60.204.168.139:720";
-//const BASE_URL = "http://localhost:8000";
+//const BASE_URL = "http://60.204.168.139:720";
+const BASE_URL = "http://127.0.0.1:8000";
 const API_PREFIX = "/api/v1";
 
 export interface ChatSession {
